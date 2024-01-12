@@ -1,0 +1,599 @@
+:root{
+    --color1: #fff;
+    --color2:#964B00;
+    --color3: rgb(240, 190, 141);
+    --color4: #fdb874;
+    --color5:#f5d1ae;
+    --color6: rgb(246, 190, 134);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+main{
+    min-height:100vh;
+    background-color: var(--color1);
+}
+
+body {
+    height:100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* css-navbar */
+.container{
+    width:100%;
+    height:70px;
+    display:flex;
+    align-items: center;
+    position: fixed;
+    z-index:99;
+    top:0;
+    left:0;
+    box-shadow:  0px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: var(--color2);
+}
+
+.container header{
+    flex:1;
+    margin-left:50px;
+}
+
+.container > header > a{
+    font-weight: bold;
+    text-decoration: none;
+    color:var(--color1);
+}
+
+.container .search-box{
+    flex:1;
+    position: relative;
+}
+
+.search-box input{
+    width: 100%;
+    height: 40px;
+    outline:none;
+    border-radius:30px;
+    background:var(--color1);
+    font-size: 16px;
+    text-align:center;
+    padding-left:5px;
+    padding-right:40px;
+}
+
+.search-box button{
+    cursor: pointer;
+    width: 40px;
+    height:40px;
+    border-radius: 30px;
+    border:none;
+    position:absolute;
+    top:0;
+    right:0;
+    transform:scale(0.9);
+    background:brown;
+}
+
+.container ul{
+    flex:2;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+
+
+.container ul li{
+    list-style:none;
+}
+
+.container ul li a,
+.container ul li {
+    text-decoration: none;
+    color:var(--color1);
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+.container ul li a:hover,
+.container ul li:hover{
+    border-bottom: 2px solid red;
+}
+
+#chk1{
+    display:none;
+}
+
+.container .menu{
+    font-size: 2.5em;
+    display:none;
+} 
+
+
+/* ================================================ */
+
+ .output{
+    width: 50%;
+    height: 50%;
+    background-color:var(--color3);
+    padding-top: 5%;
+    z-index:10;
+    position: fixed;
+    overflow: auto;
+}
+
+.output ul .outputed{
+    text-align: center;
+} 
+
+.content{
+    max-width: 100%;
+    margin:0 70px;
+    padding: 0 1rem;
+}
+.content ul{
+    margin:100px 0 0 0;
+    padding:0;
+    list-style: none;
+}
+
+.content ul h1{
+    margin-bottom: 35px;
+}
+
+.content ul p:nth-child(1){
+    line-height: 2.7rem;
+    font-size: 25px;
+}
+
+.content figure{
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    max-height: 450px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.content figure  img {
+    margin-bottom: -4px;
+    width: 100%;
+    object-fit: cover;
+}
+
+figcaption{
+    color:var(--color1);
+    font-size: 1.875rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.reader p{
+    color:var(--color1);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.reading > .quotes > h1{ 
+    color:  var(--color2);
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.reading > .quotes .spacer {
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+.read p{
+    width:45%;
+    text-align: left;
+    font-size: 25px;
+    padding-left: 30px;
+} 
+
+.world-library{
+    margin:0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.world-library-books{
+    font-size: 40px;
+    background-image:linear-gradient(#fff, #f5d1ae 56%, #fdb874);
+}
+
+@keyframes slideText{
+    0% {
+      transform: translateX(-100%);
+    }
+    30% {
+      transform: translateX(50%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+}
+  
+.slide-text {
+    margin-top:2.5%;
+    animation: slideText 15s infinite;
+    padding-bottom:1%;
+    font-size: 20px; 
+}
+
+.world-library-books > h2{
+    margin-top:0;
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.world-library-books .everything-else {
+    width:100%;
+    height: 70%;
+    display:flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.world-library-books .everything-else span{
+    width:20%;
+    height:100%;
+    border: 1px solid black;
+    background-color: pink;
+}
+
+.world-library > .library-shelf{
+    margin-top:0;
+    height:60%;
+    width:100%;
+    background-color:#964B00;
+    border: 1px solid black;
+}
+
+.world-library > .room{
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    padding-left: 6.3%;
+    font-family:cursive;
+    font-size: 20px;
+    color:#fff;
+}
+.content ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.romance{
+    width: 100%;
+    height:100vh;
+    background-color:var(--color1);
+}
+
+.romanceFiction  span {
+    border: 1px solid #ccc;
+    border-radius:30px;
+    max-height:16rem;
+    margin-top: 5%;
+    font-size: 25px;
+    padding: 2%;
+    text-align: center;
+}
+
+.romance div, 
+h2{
+    font-size: 19px;
+}
+
+.romance .romanceFiction {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap:2%;
+    margin: 0 5% 2% 5%;
+}
+
+.romance .loveScience{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap:2%;
+    margin: 0 5% 2% 5%;
+}
+
+.loveScience span {
+    border: 1px solid #ccc;
+    border-radius:30px;
+    max-height:16rem;
+    margin-top: 5%;
+    font-size: 30px;
+    padding: 2%;
+    text-align: center;  
+}
+
+.romance  .loveScience  span:hover,
+.romance  .romanceFiction span:hover{
+    background-color: var(--color5);
+    transition: 0.5s, ease, 2s;
+}
+
+.romanceButton{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin-top: 5%;
+    margin-left:8%;
+    margin-right: 8%;
+    outline:none;
+}
+
+.romanceButton > button{
+    border:none;
+    padding:7px 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color:var(--color4);
+    transition: 0.5s, ease, 2s;
+}
+
+.romance > .romanceButton > button:hover{
+    background-color: var(--color5);
+}
+
+.spaceBar{
+    height: 10%;
+}
+
+footer{
+    width: 100%;
+    background-color: #964B00;
+    padding-top:2%;
+    font-size: 24px;
+    padding-left: 9%;
+    padding-right: 9%;
+    padding-bottom: 2%;
+}
+
+footer header{
+    text-align: center;
+    margin-bottom:25px;
+}
+
+footer .footerCompany .genres .list{
+    margin-bottom: 5%;
+    color: var(--color1)
+}
+
+.forLogin > div:hover{
+    color:#f5d1ae;
+}
+
+.space{
+    padding:30px;
+}
+
+.subscribe{
+    margin-bottom: 2%;
+}
+
+.subscribe .newsletter{
+    display: flex;
+    align-items: center;
+    gap:2%;
+    padding-bottom: 3%;
+}
+
+.mains{
+    min-height: 100vh;
+    width: 100%;
+    display:flex;
+
+}
+
+.mains .loginImage,
+.registrationImage{
+    display:none
+}
+
+.mains .formContainer{
+    flex:2;
+}
+
+.mains .formContainer{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+ .mains .formContainer .formix{ 
+   padding: 5%;
+    width:500px;
+ } 
+
+.mains .formContainer .signup-form{
+    border-radius: 19px;
+    border: 1px;
+ }
+ 
+ .mains .formContainer .formix .input-InputName, .input-Input-mail, .input-Input-passkey{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+ }
+ 
+ .mains .formContainer .formix input {
+    border: none;
+    outline:none;
+    width: 100%;
+ }
+ 
+ .mains .formContainer .formix input {
+    border: none;
+    outline:none;
+    width: 100%;
+ }
+ 
+ .input-mail, .input-passkey, .submission{
+    margin-top: 32px;
+ }
+ 
+ .submission{
+    background-color: var(--color3);
+    text-align: center;
+    padding:7px 20px;
+    width: 100%;
+    border-radius: 20px;
+    border:2px thin black;
+ }
+ 
+ .submission:hover{
+    background-color: var(--color6);
+ } 
+
+
+
+ /* about us */
+ .about{
+    margin:100px 70px;
+    padding: 0 1rem;
+    text-align: justify;
+    line-height:2.0;
+    font-size:16px;
+}
+
+.about header{
+    text-align: center;
+    font-weight:bold;
+}
+
+.about h2{
+    text-align: center;
+
+}
+
+
+ /* ================================== */
+ 
+ @media(max-width:850px){
+    .search-box button{
+        position: absolute;
+    }
+    
+    .container ul{
+        top:70px;
+        position:fixed;
+        gap:5;
+        left:50%;
+        z-index:99;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .menu{
+        display:block;
+        width: 100px;
+        text-align: center;
+        color: var(--color1);
+    }
+    
+    .taged,
+    .tag{
+        transition: right 0.5s linear;
+        height:100%;
+        width: 100%;
+        background-color:rgba(0,0,0,0.5);
+    }
+}
+
+
+@media(min-width: 850px){
+    .content ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    .taged,
+    .tag{
+        display: flex;
+        justify-content: space-evenly;
+    }
+   
+    .mains .loginImage{
+        display:block;
+        flex:1;
+        overflow: hidden;
+        position: relative;
+        background-image: url("./smile.jpg");
+        background-position: 0;
+        background-size: 100% 100%;
+    }
+    
+    .mains .registrationImage{
+        display:block;
+        flex:1;
+        overflow: hidden;
+        position: relative;
+        background-image: url("./readingTea.jpg");
+        background-position: 0;
+        background-size: 100% 100%;
+    }
+    
+    .content li {
+        flex-basis: 48.5%;
+    }
+
+    figure img {
+        object-position: 0;
+    }
+
+    .romanceFiction span{
+        flex-basis: 32.5%;
+     
+    }
+
+    .loveScience span{
+        flex-basis: 32.5%;
+    }
+
+    .romanceButton button{
+        flex-basis:  100%;
+    } 
+
+    footer .footerCompany .genres .list{
+        flex-basis: 32.5%;
+    }   
+}
+
+@media(min-width:500px){
+    footer .footerCompany .genres{
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+   
+}
