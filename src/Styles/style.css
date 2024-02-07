@@ -121,7 +121,6 @@ body {
  .output{
     width: 50%;
     height: 50%;
-    /* background-color:var(--color3); */
     padding-top: 5%;
     z-index:10;
     position: fixed;
@@ -130,6 +129,7 @@ body {
 
 .output ul .outputed{
     text-align: center;
+    line-height: 1.8;
 } 
 
 .content{

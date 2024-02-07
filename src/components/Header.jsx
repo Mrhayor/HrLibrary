@@ -115,14 +115,14 @@ const Header = () => {
         </div>
 
     </nav>
-    <div className="output" style={{ backgroundColor:"#fdb874", display: isDisplay ? 'block' : 'none' }}>
+    <div className="output">
             <ul>
             {
                 inputStore.map((book) =>{
                     console.log("titles:", book.title, book.key)
                     return(
                         <>
-                            <li className="outputed" style={{'marginTop': '15px'}}   key={book.key} onClick={()=>{navigate("/SearchedResuts", 
+                            <li className="outputed" style={{  backgroundColor:"#fdb874", display: isDisplay ? 'block' : 'none' }}  key={book.key} onClick={()=>{navigate("/SearchedResuts", 
                             {replace:true, state:{book}})}}><NavLink to="/SearchedResuts" onClick={handleLinkClick}>{book.title}</NavLink></li>
                         </>
                     )
