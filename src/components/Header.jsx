@@ -32,22 +32,14 @@ const Header = () => {
         useEffect(()=>{
            const listen =  onAuthStateChanged(auth, (user) => {
             if (user) {
-                // User is signed in, see docs for a list of available properties
-                // https://firebase.google.com/docs/reference/js/auth.user
-                setEmailStore( user.email)
-               console.log(emailStore + " samuel header");
-              //  return user.email;
-              // console.log(auth)
-              // console.log(user)
+              setEmailStore( user.email)
+              console.log(emailStore + " samuel header");
               console.log(user)
               setAuthenticatedUser(user)
-                // ...
-               
-             
+          
               } else {
                console.log("User is signed out")
                setAuthenticatedUser(null)
-                // ...
               }
             })
             return () =>{
@@ -79,6 +71,10 @@ const Header = () => {
         }
         return onDisplay();
         }
+
+        const handleLinkClick = () => {
+            setIsDisplay(false);
+        };
 
   return (
     <>
@@ -113,25 +109,21 @@ const Header = () => {
                 </div>
                </>
             }
-
-
         </ul>
         <div className="menu">
             <RxHamburgerMenu onClick={()=> setToggler(!toggler)}/>
-
         </div>
 
-
     </nav>
-    <div className="output" style={{ display: isDisplay ? 'block' : 'none' }}>
+    <div className="output" style={{ backgroundColor:"#fdb874", display: isDisplay ? 'block' : 'none' }}>
             <ul>
             {
                 inputStore.map((book) =>{
-                    console.log("harry potter titles:", book.title, book.key)
+                    console.log("titles:", book.title, book.key)
                     return(
                         <>
                             <li className="outputed" style={{'marginTop': '15px'}}   key={book.key} onClick={()=>{navigate("/SearchedResuts", 
-                            {replace:true, state:{book}})}}><NavLink to="/SearchedResuts" >{book.title}</NavLink></li>
+                            {replace:true, state:{book}})}}><NavLink to="/SearchedResuts" onClick={handleLinkClick}>{book.title}</NavLink></li>
                         </>
                     )
                 })

@@ -121,7 +121,7 @@ body {
  .output{
     width: 50%;
     height: 50%;
-    background-color:var(--color3);
+    /* background-color:var(--color3); */
     padding-top: 5%;
     z-index:10;
     position: fixed;
@@ -134,10 +134,13 @@ body {
 
 .content{
     max-width: 100%;
-    margin:0 70px;
+    margin:0 30px;
     padding: 0 1rem;
+    text-align: justify;
 }
-.content ul{
+
+.content ul,
+.searched{
     margin:100px 0 0 0;
     padding:0;
     list-style: none;
@@ -204,6 +207,11 @@ figcaption{
     font-size: 25px;
     padding-left: 30px;
 } 
+
+.reading ul li:nth-child(2) p{
+    font-size:14px;
+    color:yellow;
+}
 
 .world-library{
     margin:0;
@@ -375,13 +383,17 @@ footer{
 }
 
 footer header{
+    color: var(--color1);
+    font-weight: bold;
     text-align: center;
     margin-bottom:25px;
 }
 
 footer .footerCompany .genres .list{
     margin-bottom: 5%;
-    color: var(--color1)
+    color: var(--color1);
+    text-transform: capitalize;
+    line-height: 1.5;
 }
 
 .forLogin > div:hover{
@@ -402,6 +414,13 @@ footer .footerCompany .genres .list{
     gap:2%;
     padding-bottom: 3%;
 }
+
+.subscribe p{
+   line-height: 1;
+   color:var(--color1);
+   text-transform: justify;
+}
+
 
 .mains{
     min-height: 100vh;
@@ -494,6 +513,24 @@ footer .footerCompany .genres .list{
 
 }
 
+/* ========================================================
+=========================================================== */
+.results{
+  text-align: center;
+  line-height: 1.6;
+}
+
+.results header{
+    font-weight: bold;
+}
+
+.results ul img{
+    padding-top: 5px;
+    height:200px;
+}
+
+/* ========================================================
+=========================================================== */
 
  /* ================================== */
  
@@ -585,8 +622,10 @@ footer .footerCompany .genres .list{
     } 
 
     footer .footerCompany .genres .list{
-        flex-basis: 32.5%;
-    }   
+        flex-basis: 20%;
+    }  
+    
+   
 }
 
 @media(min-width:500px){
@@ -595,5 +634,10 @@ footer .footerCompany .genres .list{
         flex-flow: row wrap;
         justify-content: space-between;
     }
+
+    /* .reading ul li:nth-child(2) p{
+        font-size:14px;
+        color:yellow;
+    } */
    
 }

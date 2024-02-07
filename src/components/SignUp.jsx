@@ -2,9 +2,6 @@ import {useState} from "react";
 import userSignUp from "../auth/userSignUp";
 import  {useNavigate, useLocation} from "react-router-dom";
 
-
-
-
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,19 +32,12 @@ const SignUp = () => {
  console.log(name)
   return (
    <>
-        {/* {<Header name={name}/> } */}
         <div className="mains">
           <div className="registrationImage"></div>
      
           <div className="formContainer">
               <div className="formix signup-form">
                 <form onSubmit={handleSignUp}>
-                  {/* <div className='inputName'>
-                    <label htmlFor="name">Full Name</label>
-                    <div className='input-InputName'>
-                      <input type="text" value={name} onChange={(e)=> setName(e.target.value)} placeholder='full name' /> 
-                    </div>
-                  </div> */}
                   
                   <div className='input-mail'>
                     <label htmlFor="email">Email</label>

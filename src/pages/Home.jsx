@@ -1,10 +1,6 @@
 import Header from '../components/Header.jsx'
 
 export default function Home() {
-
-
-
-
   return (
     <main>  
         <Header/>
@@ -24,7 +20,7 @@ export default function Home() {
 
                     <li>
                         <figure>
-                            <img src="reading.jpg" alt="Pop Art: This must be the place" />
+                            <img src="https://res.cloudinary.com/dz0drrrvm/image/upload/v1704930008/n6jw4lnrehot2jxfglj0.jpg" alt="A place to read" />
                             <figcaption> 
                                 <p>
                                     Books and doors are the same thing. <br/>
@@ -98,14 +94,6 @@ Libraries are portals to worlds unknown, where each book is a key and every read
                 </div>
 
                 <div className='list'>
-                    <div>Mystery/Thriller1</div>
-                    <div>Historical Fiction2</div>
-                    <div>Dystopian3</div>
-                    <div>Adventure4</div>
-                    <div>Romance5</div>
-                </div>
-
-                <div className='list'>
                     <div>Fantasy:</div>
                     <div>Science Fic</div>
                     <div>Coming-of-Age</div>
@@ -117,10 +105,7 @@ Libraries are portals to worlds unknown, where each book is a key and every read
                    <div>Western</div>
                    <div>Satire</div>
                 </div>
-                <div className='list'>
-                   <div>Login</div>
-                   <div>Sign up</div>
-                </div>
+               
                 </div>
             </div>
             {/* <div className="space"></div> */}
@@ -137,7 +122,9 @@ Libraries are portals to worlds unknown, where each book is a key and every read
                     </div>
                 </div> 
                  {/* <div className="space"></div>  */}
-                 <p>I understand that HrLibrary will process my information in accordance with their <a href="/privacy">Privacy Policy</a> I may withdraw my consent through unsubscribe links at any time.
+                 <p>
+                    I understand that HrLibrary will process my information in accordance with their
+                    <a href="/privacy">Privacy Policy</a> I may withdraw my consent through unsubscribe links at any time.
                 </p>
             </div>
             <hr />
