@@ -31,14 +31,15 @@ const Login =  () =>{
 
   return (
  <>
-        {/* {<Header /> } */}
         
         <div className="mains">
           <div className="loginImage"></div>
      
           <div className="formContainer">
+         
               <div className="formix signup-form">
                 <form onSubmit = {handleLogin}>
+                <header>Login</header>
                   <div className='input-mail'>
                     <label htmlFor="gmail">Gmail</label>
                     <div className="input-Input-mail">

@@ -36,7 +36,9 @@ const SignUp = () => {
           <div className="registrationImage"></div>
      
           <div className="formContainer">
+           
               <div className="formix signup-form">
+              <header>Sign up</header>
                 <form onSubmit={handleSignUp}>
                   
                   <div className='input-mail'>

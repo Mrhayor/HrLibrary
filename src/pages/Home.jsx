@@ -21,12 +21,6 @@ export default function Home() {
                     <li>
                         <figure>
                             <img src="https://res.cloudinary.com/dz0drrrvm/image/upload/v1704930008/n6jw4lnrehot2jxfglj0.jpg" alt="A place to read" />
-                            <figcaption> 
-                                <p>
-                                    Books and doors are the same thing. <br/>
-                                    You open them, and you go through into another world.
-                                </p>
-                            </figcaption>
                         </figure>
                     </li>
                 </ul>
@@ -50,84 +44,79 @@ Libraries are portals to worlds unknown, where each book is a key and every read
         <section className="romance fiction love science">
             <div className="rae">
                 <div className="romanceFiction">
-                    <span className="romantic">
+                    <span>
                         <h2>Fiction</h2>
                         <div>is a type of book or story that is written about imaginary characters and events and not based on real people and facts:</div>
                     </span>
-                    <span className="fiction">
+                    <span className="nov">
                         <h2>Non-fiction</h2>
                         <div>is about real events and facts, rather than stories that have been invented</div>
                     </span>
                 </div>
                 <div className="loveScience">
-                    <span className="love">
+                    <span>
                         <h2>Historical-Fiction</h2>
                         <div>takes readers to a time and place in the past,  it’s set in the past, with every element of the story conforming to the norms of the day. </div>
                     </span>
-                    <span className="science">
+                    <span>
                         <h2>Science-Fiction</h2>
                         <div> deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life.</div>
                     </span>
                 </div>
             </div>
-            <div className='romanceButton'>
-                <button>Read a Book</button>
-            </div>
+           
         </section>
         <footer>
         <header>HrLibrary</header>
             <div className="footerCompany">
                 
                 <div className="genres">
-                <div className='list'>
-                    <div>manga</div>
-                    <div>manga</div>
-                    <div>manga</div>
-                    <div>manga</div>
-                </div>
-                <div className='list'>
-                    <div>Mystery/Thriller</div>
-                    <div>Historical Fiction</div>
-                    <div>Dystopian</div>
-                    <div>Adventure</div>
-                    <div>Romance</div>
-                </div>
+                    <div className='list'>
+                        <div>manga</div>
+                        <div>manga</div>
+                        <div>manga</div>
+                        <div>manga</div>
+                    </div>
+                    
+                    <div className='list'>
+                        <div>Mystery/Thriller</div>
+                        <div>Historical Fiction</div>
+                        <div>Dystopian</div>
+                        <div>Adventure</div>
+                        <div>Romance</div>
+                    </div>
 
-                <div className='list'>
-                    <div>Fantasy:</div>
-                    <div>Science Fic</div>
-                    <div>Coming-of-Age</div>
-                    <div>Horror</div>
-                </div>
-                <div className='list'>
-                   <div>Romance</div>
-                   <div>Historical Fiction</div>
-                   <div>Western</div>
-                   <div>Satire</div>
-                </div>
+                    <div className='list'>
+                        <div>Fantasy:</div>
+                        <div>Science Fic</div>
+                        <div>Coming-of-Age</div>
+                        <div>Horror</div>
+                    </div>
+
+                    <div className='list'>
+                    <div>Romance</div>
+                    <div>Historical Fiction</div>
+                    <div>Western</div>
+                    <div>Satire</div>
+                    </div>
                
                 </div>
             </div>
             {/* <div className="space"></div> */}
             <div className="subscribe">
-                <div className="newsletter">
+            
                     <p>
-                        Join our newsletter to stay up to date on features and releases
+                        Join our newsletter to stay up to date on features and releases 
                     </p>
-                    <div className="search-box"> 
-                        <form>
-                            <input type="text" placeholder="search" className="inp-word"/>
-                            <button id="search-btn">search</button>
+                    <form action=""><input type="
+                        " name="" id="" />
+                        <button>onSubmit</button>
                         </form>
-                    </div>
-                </div> 
+            
                  {/* <div className="space"></div>  */}
-                 <p>
-                    I understand that HrLibrary will process my information in accordance with their
-                    <a href="/privacy">Privacy Policy</a> I may withdraw my consent through unsubscribe links at any time.
-                </p>
             </div>
             <hr />
+            {/* (c) soluwaseun946@gmail.com */}
         </footer>
     </main>
   )

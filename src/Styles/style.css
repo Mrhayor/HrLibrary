@@ -62,8 +62,7 @@ body {
     border-radius:30px;
     background:var(--color1);
     font-size: 16px;
-    text-align:center;
-    padding-left:5px;
+    padding-left:15px;
     padding-right:40px;
 }
 
@@ -85,8 +84,6 @@ body {
     display:flex;
     justify-content: space-evenly;
 }
-
-
 
 .container ul li{
     list-style:none;
@@ -168,16 +165,6 @@ body {
     margin-bottom: -4px;
     width: 100%;
     object-fit: cover;
-}
-
-figcaption{
-    color:var(--color1);
-    font-size: 1.875rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 .reader p{
@@ -294,7 +281,7 @@ figcaption{
 
 .romance{
     width: 100%;
-    height:100vh;
+    height:80vh;
     background-color:var(--color1);
 }
 
@@ -345,29 +332,6 @@ h2{
     transition: 0.5s, ease, 2s;
 }
 
-.romanceButton{
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    margin-top: 5%;
-    margin-left:8%;
-    margin-right: 8%;
-    outline:none;
-}
-
-.romanceButton > button{
-    border:none;
-    padding:7px 20px;
-    border-radius: 20px;
-    text-align: center;
-    background-color:var(--color4);
-    transition: 0.5s, ease, 2s;
-}
-
-.romance > .romanceButton > button:hover{
-    background-color: var(--color5);
-}
-
 .spaceBar{
     height: 10%;
 }
@@ -375,11 +339,11 @@ h2{
 footer{
     width: 100%;
     background-color: #964B00;
-    padding-top:2%;
+    padding-top:20px;
     font-size: 24px;
-    padding-left: 9%;
-    padding-right: 9%;
-    padding-bottom: 2%;
+    padding-left: 60px;
+    padding-right: 29px;
+    padding-bottom: 50px;
 }
 
 footer header{
@@ -390,10 +354,15 @@ footer header{
 }
 
 footer .footerCompany .genres .list{
-    margin-bottom: 5%;
+    margin-bottom: 25px;
     color: var(--color1);
     text-transform: capitalize;
     line-height: 1.5;
+    cursor: pointer;
+}
+
+footer .footerCompany .genres .list div:hover{
+  color: var(--color6);
 }
 
 .forLogin > div:hover{
@@ -405,22 +374,38 @@ footer .footerCompany .genres .list{
 }
 
 .subscribe{
-    margin-bottom: 2%;
-}
-
-.subscribe .newsletter{
-    display: flex;
-    align-items: center;
+    width:100%;
+    display:flex;
+    justify-content: left;
     gap:2%;
-    padding-bottom: 3%;
+    padding-bottom:25px;
 }
 
 .subscribe p{
+   font-size: 20px;
    line-height: 1;
    color:var(--color1);
    text-transform: justify;
 }
 
+.subscribe form {
+   flex:1;
+}
+
+.subscribe form input{
+
+    padding:5px 5px;
+    width:50%;
+    margin-right: 8px;
+    border: 1px solid black;
+    border-radius:5px;
+}
+
+.subscribe form button{
+    border-radius:10px;
+    padding:5px;  
+    border:none; 
+}
 
 .mains{
     min-height: 100vh;
@@ -429,10 +414,6 @@ footer .footerCompany .genres .list{
 
 }
 
-.mains .loginImage,
-.registrationImage{
-    display:none
-}
 
 .mains .formContainer{
     flex:2;
@@ -446,34 +427,36 @@ footer .footerCompany .genres .list{
  }
  
  .mains .formContainer .formix{ 
-   padding: 5%;
+    padding: 2% 5%;
     width:500px;
- } 
-
-.mains .formContainer .signup-form{
-    border-radius: 19px;
     border: 1px;
+  
  }
+
+ /* . */
  
- .mains .formContainer .formix .input-InputName, .input-Input-mail, .input-Input-passkey{
+ /* .mains .formContainer .formix .input-InputName, .input-Input-mail, .input-Input-passkey{
     width: 100%;
     background-color: #fff;
     padding: 10px 16px;
     border: 1px solid black;
     border-radius: 4px;
- }
+ } */
  
  .mains .formContainer .formix input {
     border: none;
-    outline:none;
     width: 100%;
+    background-color: #fff;
+    padding: 10px 6px;
+    border: 1px solid black;
+    border-radius: 4px;
+ }
+
+ .mains .formContainer .formix input:focus,
+ .subscribe form input:focus {
+    outline-color: #fdb874;
  }
  
- .mains .formContainer .formix input {
-    border: none;
-    outline:none;
-    width: 100%;
- }
  
  .input-mail, .input-passkey, .submission{
     margin-top: 32px;
@@ -485,14 +468,12 @@ footer .footerCompany .genres .list{
     padding:7px 20px;
     width: 100%;
     border-radius: 20px;
-    border:2px thin black;
+    border:none;
  }
  
  .submission:hover{
     background-color: var(--color6);
  } 
-
-
 
  /* about us */
  .about{
@@ -580,26 +561,6 @@ footer .footerCompany .genres .list{
         justify-content: space-evenly;
     }
    
-    .mains .loginImage{
-        display:block;
-        flex:1;
-        overflow: hidden;
-        position: relative;
-        background-image: url("./smile.jpg");
-        background-position: 0;
-        background-size: 100% 100%;
-    }
-    
-    .mains .registrationImage{
-        display:block;
-        flex:1;
-        overflow: hidden;
-        position: relative;
-        background-image: url("./readingTea.jpg");
-        background-position: 0;
-        background-size: 100% 100%;
-    }
-    
     .content li {
         flex-basis: 48.5%;
     }
@@ -625,6 +586,19 @@ footer .footerCompany .genres .list{
         flex-basis: 20%;
     }  
     
+
+    .mains .formContainer .formix{ 
+        padding: 2% 5%;
+        width:500px;
+        border: 1px;
+        height:50%;
+        border-radius: 19px;
+        box-shadow:  0px 0px 20px 5px rgba(0,0,0,0.15);
+    }
+
+    .mains .formContainer .formix header{
+    text-align: center;
+    }
    
 }
 
